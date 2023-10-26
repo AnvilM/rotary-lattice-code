@@ -94,7 +94,7 @@ Class HomeController extends Controller{
             //Вывод таблицы
             for($i = 0; $i < $table_size; $i++){
                 for($j = 0; $j < $table_size; $j++){
-                    $shift = $shift.$table[$i][$j];
+                    $shift = $shift.$table[$j][$i];
                 }
             }
 
@@ -178,7 +178,7 @@ Class HomeController extends Controller{
 
             //Расшифровка таблицы
             for($i = 0; $i < count($indexs); $i++){
-                $src[$i] = $table[$indexs[$i][0]][$indexs[$i][1]];
+                $src[$i] = $table[$indexs[$i][1]][$indexs[$i][0]];
             }
 
             echo $src;
